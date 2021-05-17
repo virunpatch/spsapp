@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'from',
     loadChildren: () => import('./from/from.module').then( m => m.FromPageModule)
   },
+  {
+    path: 'know',
+    loadChildren: () => import('./know/know.module').then( m => m.KnowPageModule)
+  },
+  {
+    path: 'con',
+    loadChildren: () => import('./con/con.module').then( m => m.ConPageModule)
+  },
 ];
 
 @NgModule({
