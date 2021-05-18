@@ -14,16 +14,21 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>แบบประเมินโรคซึมเศร้า</ion-card-title>
-      <p><img src="/assets/img/Lung_Page.jpg" width="500" height="150"><br></p>
+      <ion-card-subtitle> Assessment form </ion-card-subtitle>
+      <ion-card-title> แบบประเมินโรคซึมเศร้า 9Q </ion-card-title>
     </ion-card-header>
-
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
   </ion-card>
 
 
+    <ion-list>
+    <ion-card *ngFor="let TPS of TP; let ip of Q">{{ip.tl2}}
+      <ion-item  *ngFor="let entry of form">{{TPS.title}}
+        <ion-label>{{entry.tp}}</ion-label>
+        <ion-checkbox slot="end" ></ion-checkbox>
+       </ion-item>
+       </ion-card>
+    </ion-list>
+
+    <ion-button expand="block" color="success" > ส่ง </ion-button>
 
 </ion-content>
