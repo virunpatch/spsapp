@@ -15,14 +15,14 @@ export class FromPage implements OnInit {
           {title:'อาการเบื่อ'},
           {title:'อาการเบื่อ'},]
   public form = [
-    { val: 0,tp: '0 ไม่มีอาการ' ,isChecked: false },
-    { val: 1,tp: '1 เล็กน้อย' ,isChecked: false },
-    { val: 2,tp: '2 ปลานกลาง' ,isChecked: false },
-    { val: 3,tp: '3 รุนแรง' ,isChecked: false }
+    { val: 0,tp: '0: ไม่เลย' ,isChecked: false },
+    { val: 1,tp: '1: มีบางวันหรือไม่บ่อย' ,isChecked: false },
+    { val: 2,tp: '2: มีค่อนข้างบ่อย' ,isChecked: false },
+    { val: 3,tp: '3: มีเกือบทุกวัน' ,isChecked: false }
   ];
 
   Q: any=[{tl2:'คำถามที่1: ท่านมีพฤติกรรมการกินที่มากเกินไปหรือว่าน้อยเกินไปหรือไม่'},
-          {tl2:'คำถามที่2: '},
+          {tl2:'คำถามที่2: ท่านมีอาการหลับๆตื่นๆ หลับยากหรือไม่'},
           {tl2:'คำถามที่3: '},
           {tl2:'คำถามที่4: '},
           {tl2:'คำถามที่5: '},

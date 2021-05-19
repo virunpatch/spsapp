@@ -12,19 +12,50 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-subtitle> News </ion-card-subtitle>
-      <ion-card-title>Covid-19 Today</ion-card-title>
-      <p><img src="/assets/img/Lung_Page.jpg" width="500" height="150"><br></p>
-    </ion-card-header>
+  <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle> News </ion-card-subtitle>
+          <ion-card-title>Covid-19 Today</ion-card-title>
+          <p><img src="/assets/img/Lung_Page.jpg" width="500" height="150"><br></p>
+        </ion-card-header>
 
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle> News </ion-card-subtitle>
+          <ion-card-title>Covid-19 Today</ion-card-title>
+          <p><img src="/assets/img/Lung_Page.jpg" width="500" height="150"><br></p>
+        </ion-card-header>
 
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle> News </ion-card-subtitle>
+          <ion-card-title>Covid-19 Today</ion-card-title>
+          <p><img src="/assets/img/Lung_Page.jpg" width="500" height="150"><br></p>
+        </ion-card-header>
+
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
   <ion-card>
     <section>
       <ion-card-subtitle> Mini Menu </ion-card-subtitle>

@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'home',
+    path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'con',
     loadChildren: () => import('./con/con.module').then( m => m.ConPageModule)
+  },
+  {
+    path: 'cal',
+    loadChildren: () => import('./cal/cal.module').then( m => m.CalPageModule)
   },
 ];
 
