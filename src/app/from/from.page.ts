@@ -7,13 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FromPage implements OnInit {
 
-  TP:any=[{title:'อาการเบื่อ'},
-          {title:'อาการเบื่อ'},
-          {title:'อาการเบื่อ'},
-          {title:'อาการเบื่อ'},
-          {title:'อาการเบื่อ'},
-          {title:'อาการเบื่อ'},
-          {title:'อาการเบื่อ'},]
+  TP:any=[{title:'อาการเบื่อ'},]
   public form = [
     { val: 0,tp: '0: ไม่เลย' ,isChecked: false },
     { val: 1,tp: '1: มีบางวันหรือไม่บ่อย' ,isChecked: false },

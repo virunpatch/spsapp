@@ -21,14 +21,16 @@
 
 
     <ion-list>
-    <ion-card *ngFor="let TPS of TP; let ip of Q">{{ip.tl2}}
-      <ion-item  *ngFor="let entry of form">{{TPS.title}}
-        <ion-label>{{entry.tp}}</ion-label>
-        <ion-checkbox slot="end" ></ion-checkbox>
-       </ion-item>
-       </ion-card>
+      <ion-card *ngFor="let TPS of TP " >
+        <ion-card *ngFor="let ip of Q" style="font-weight: 100;font-size: 1.2em; color: #fafafa"> {{ip.tl2}} <p>
+        <ion-item  *ngFor="let entry of form">{{TPS.title}}
+          <ion-label>{{entry.tp}}</ion-label>
+          <ion-checkbox slot="end" ></ion-checkbox>
+        </ion-item>
+      </ion-card>
+      </ion-card>
     </ion-list>
 
-    <ion-button expand="block" color="success" [routerLink]="['/cal']"> ส่ง </ion-button>
+  <ion-button expand="block" color="success" [routerLink]="['/cal']"> ส่ง </ion-button>
 
 </ion-content>
