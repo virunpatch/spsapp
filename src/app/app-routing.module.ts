@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'cal',
     loadChildren: () => import('./cal/cal.module').then( m => m.CalPageModule)
   },
+  {
+    path: 'know2',
+    loadChildren: () => import('./know2/know2.module').then( m => m.Know2PageModule)
+  },
 ];
 
 @NgModule({
