@@ -1,5 +1,7 @@
 {
   "name": "spsapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,5 +1,7 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonSlides } from '@ionic/angular';
+
+
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,7 @@ export class HomePage {
     speed: 600,
   };
 
+
   goToSlide() {
     this.slides.slideTo(2, 500);
   }
@@ -23,4 +26,7 @@ export class HomePage {
     slides.startAutoplay();
   }
 
+ 
 }
+
+

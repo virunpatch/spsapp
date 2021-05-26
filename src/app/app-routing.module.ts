@@ -24,12 +24,16 @@ const routes: Routes = [
     loadChildren: () => import('./con/con.module').then( m => m.ConPageModule)
   },
   {
+    path: 'know2',
+    loadChildren: () => import('./know2/know2.module').then( m => m.Know2PageModule)
+  },
+  {
     path: 'cal',
     loadChildren: () => import('./cal/cal.module').then( m => m.CalPageModule)
   },
   {
-    path: 'know2',
-    loadChildren: () => import('./know2/know2.module').then( m => m.Know2PageModule)
+    path: 'map',
+    loadChildren: () => import('./map/map.module').then( m => m.MapPageModule)
   },
 ];
 

@@ -13,4 +13,26 @@
 
 <ion-content>
 
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <p>{{cname}}</p>
+      </ion-title>
+
+      <ion-button (click)="closeModal()" slot="end" color="danger">
+        <ion-icon slot="icon-only" name="close" ></ion-icon>
+      </ion-button>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-img src="{{img}}"></ion-img>
+    <ion-content class="ion-padding">
+      <h3>รายละเอียด</h3>
+      <p> {{detail}}</p>
+    </ion-content>
+
+  </ion-content>
+
 </ion-content>
