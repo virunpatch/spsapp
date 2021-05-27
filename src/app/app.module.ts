@@ -11,8 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+//import { Geolocation } from '@ionic-native/geolocation/ngx';
+//import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
 
 @NgModule({
@@ -23,8 +23,8 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
     StatusBar,
     SplashScreen,
 
-    Geolocation,
-    NativeGeocoder,
+    //Geolocation,
+    //NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     //GoogleMaps
   ],
