@@ -1,3 +1,40 @@
+<!--ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item lines="none">
+      <ion-label style="font-weight: 100;font-size: 1.3em; color: #3fdc62">
+        Sunpasit Depression
+      </ion-label>
+    </ion-item>
+    <ion-button slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-button>
+  </ion-toolbar>
+</!--ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle> Assessment form </ion-card-subtitle>
+      <ion-card-title> แบบประเมินโรคซึมเศร้า 9Q </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+    <ion-list>
+      <ion-card *ngFor="let TPS of TP " >
+        <ion-card *ngFor="let ip of Q" style="font-weight: 100;font-size: 1.2em; color: #fafafa"> {{ip.tl2}} <p>
+        <ion-item  *ngFor="let entry of form">{{TPS.title}}
+          <ion-label>{{entry.tp}}</ion-label>
+          <ion-checkbox slot="end" ></ion-checkbox>
+        </ion-item>
+      </ion-card>
+      </ion-card>
+    </ion-list>
+
+  <ion-button expand="block" color="success" [routerLink]="['/cal']"> ส่ง </ion-button>
+
+</ion-content-->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-item lines="none">
@@ -22,15 +59,66 @@
 
     <ion-list>
       <ion-card *ngFor="let TPS of TP " >
-        <ion-card *ngFor="let ip of Q" style="font-weight: 100;font-size: 1.2em; color: #fafafa"> {{ip.tl2}} <p>
-        <ion-item  *ngFor="let entry of form">{{TPS.title}}
-          <ion-label>{{entry.tp}}</ion-label>
-          <ion-checkbox slot="end" ></ion-checkbox>
-        </ion-item>
-      </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่1: เบื่อ ทำอะไร ๆ ก็ไม่เพลิดเพลิน<p>
+          <ion-select [(ngModel)]='q1' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่2: ไม่สบายใจ ซึมเศร้า หรือท้อแท้<p>
+          <ion-select [(ngModel)]='q2' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่3: หลับยาก หรือหลับ ๆ ตื่น ๆ หรือหลับมากไป<p>
+          <ion-select [(ngModel)]='q3' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่4: เหนื่อยง่าย หรือไม่ค่อยมีแรง<p>
+          <ion-select [(ngModel)]='q4' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่5: เบื่ออาหาร หรือกินมากเกินไป<p>
+          <ion-select [(ngModel)]='q5' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่6: รู้สึกไม่ดีกับตัวเอง คิดว่าตัวเองล้มเหลว หรือเป็นคนทำให้ตัวเอง หรือครอบครัวผิดหวัง<p>
+          <ion-select [(ngModel)]='q6' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่7: สมาธิไม่ดีเวลาทำอะไร เช่น ดูโทรทัศน์ ฟังวิทยุ หรือทำงานท่ีต้องใช้ความตั้งใจ<p>
+          <ion-select [(ngModel)]='q7' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่8: พูดหรือทำอะไรช้าจนคนอื่นมองเห็น หรือกระสับกระส่ายจนท่านอยู่ไม่นิ่งเหมือนเคย<p>
+          <ion-select [(ngModel)]='q8' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่9: คิดทำร้ายตนเอง หรือคิดว่าถ้าตาย ๆ ไปเสียคงจะดี<p>
+          <ion-select [(ngModel)]='q9' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option *ngFor="let entry of form" value="{{entry.val}}" > {{entry.tp}} </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-button expand="block" color="success" (click)="addResult('q1','q2','q3','q4','q5','q6','q7','q8','q9')"> ประมวลผล </ion-button>
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #fafafa">ผลคะแนนที่ได้ :<b> {{result}} </b></ion-card>
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #e65656">หากคะแนนมากกว่า 9 ให้ทำแบบประเมิน 8Q</ion-card>
+        <ion-button expand="block" color="danger" [routerLink]="['/cal']"> แบบประมิน8Q </ion-button>
       </ion-card>
     </ion-list>
-
-  <ion-button expand="block" color="success" [routerLink]="['/cal']"> ส่ง </ion-button>
-
 </ion-content>
+
