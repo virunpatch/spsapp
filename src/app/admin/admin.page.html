@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ข้อมูลผู้ทำแบบสอบประเมิน</ion-title>
+    <ion-button slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list>
+  <ion-item *ngFor="let item of tmpcountrylist" >
+    <ion-item-sliding>
+      <ion-item>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>ชื่อ: {{item.name}}</ion-card-subtitle>
+            <ion-card-subtitle>คะแนน: {{item.point}}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            E-amil: {{item.mail}}
+          </ion-card-content>
+
+        </ion-card>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="warning" (click)="presentPrompt(item)">
+          <ion-icon name="create-outline"></ion-icon>EDIT
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="presentConfirm(item)">
+          <ion-icon name="trash-outline"></ion-icon>DEL
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-item>
+
+</ion-list>
+<ion-button shape="round" color="success" expand="full" (click)="presentPromptADD()">
+<ion-icon name="add-circle-outline"></ion-icon>&nbsp;&nbsp;ADD</ion-button>
+</ion-content>

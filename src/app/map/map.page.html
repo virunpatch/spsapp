@@ -11,14 +11,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <div #mapElement class="map"></div>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>ยืนยันสำเร็จ!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      การยืนยันข้อมูลของท่านเสร็จสิ้น
+    </ion-card-content>
+    <ion-button expand="block" [routerLink]="['/home']" >กลับหน้าหลัก</ion-button>
+  </ion-card>
+
 </ion-content>
 
 
 
 
-<!---ion-header [translucent]="true">
+
+<!---ion-content padding>
+  <div #mapElement class="map"></div>
+</+ion-content>
+
+<!-ion-header [translucent]="true">
 
   <ion-toolbar color="warning">
     <ion-button (click)="loadMap()" shape="round" color="dark">
@@ -28,7 +44,7 @@
     <ion-title slot="end">Google Map</ion-title>
   </ion-toolbar>
 
-</!---ion-header>
+</!-ion-header>
 
 <ion-content-- [fullscreen]="true">
 
