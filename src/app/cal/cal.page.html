@@ -11,6 +11,86 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle> Assessment form </ion-card-subtitle>
+      <ion-card-title> แบบประเมินความเสี่ยงในการฆ่าตัวตาย 8Q </ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+    <ion-list>
+      <ion-card  >
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่1: คิดอยากตาย หรือ คิดว่าตายไปจะดีกว่า<p>
+          <ion-select [(ngModel)]='q1' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=1 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่2: อยากทำร้ายตัวเอง หรือ ทำให้ตัวเองบาดเจ็บ<p>
+          <ion-select [(ngModel)]='q2' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=2 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่3.1: คิดเกี่ยวกับการฆ่าตัวตาย<p>
+          <ion-select [(ngModel)]='q31' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=6 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่3.2: ท่านสามารถควบคุมความคิดอยากฆ่าตัวตาย<p>
+          <ion-select [(ngModel)]='q32' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ได้ </ion-select-option>
+            <ion-select-option value=8 > ไม่ได้ </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่4: มีแผนการที่จะฆ่าตัวตาย<p>
+          <ion-select [(ngModel)]='q4' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=8 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่5: ได้เตรียมการที่จะทำร้ายตนเองหรือเตรียมการจะฆ่าตัวตาย โดยตั้งใจว่าจะให้ตายจริง ๆ<p>
+          <ion-select [(ngModel)]='q5' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=9 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่6: ได้ทำให้ตนเองบาดเจ็บแต่ไม่ตั้งใจที่จะทำให้เสียชีวิต<p>
+          <ion-select [(ngModel)]='q6' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=4 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่7: ได้พยายามฆ่าตัวตายโดยคาดหวัง/ตั้งใจที่จะให้ตาย<p>
+          <ion-select [(ngModel)]='q7' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value=10 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-card style="font-weight: 100;font-size: 1.5em; color: #3fdc62">คำถามที่8: ท่านเคยพยายามฆ่าตัวตาย<p>
+          <ion-select [(ngModel)]='q8' style="color: #fafafa" placeholder="please select"  ioChange = "optionChanged()">
+            <ion-select-option value=0 > ไม่มี </ion-select-option>
+            <ion-select-option value= 4 > มี </ion-select-option>
+          </ion-select>
+        </ion-card>
+
+        <ion-button expand="block" color="success" (click)="addResult('q1','q2','q31','q32','q4','q5','q6','q7','q8')"> ประมวลผล </ion-button>
+
+
+
+      </ion-card>
+    </ion-list>
 
 </ion-content>
